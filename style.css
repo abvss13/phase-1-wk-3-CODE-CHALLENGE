@@ -1,3 +1,6 @@
+/* CSS */
+
+/* Define color variables */
 :root {
     --colorOne: #161925;
     --colorTwo: #23395b;
@@ -7,6 +10,7 @@
     --colorSix: #0a369d;
   }
   
+  /* Global styles */
   * {
     padding: 0px;
     margin: 0px;
@@ -15,11 +19,13 @@
     font-family: Arial, Helvetica, sans-serif;
   }
   
+  /* Showtime text styles */
   p#showtime-text {
     position: relative;
     color: var(--colorSix);
   }
   
+  /* Showtime value styles */
   div#showtime {
     position: relative;
     top: -40px;
@@ -27,6 +33,7 @@
     color: #c42021;
   }
   
+  /* Runtime value styles */
   div#runtime {
     position: relative;
     top: -123px;
@@ -34,6 +41,7 @@
     color: #c42021;
   }
   
+  /* Runtime text styles */
   p#runtime-text {
     position: relative;
     top: -83px;
@@ -41,10 +49,12 @@
     color: var(--colorSix);
   }
   
+  /* Hero section styles */
   section#hero-section {
     background-color: var(--colorFive);
   }
   
+  /* Movie poster styles */
   img {
     width: 500px;
     height: 500px;
@@ -52,6 +62,7 @@
     border-radius: 10px;
   }
   
+  /* Page title styles */
   h1 {
     text-align: center;
     font-size: 50px;
@@ -61,6 +72,7 @@
     width: 100%;
   }
   
+  /* Movie title styles */
   h2 {
     margin-left: 100px;
     font-size: 35px;
@@ -69,12 +81,14 @@
     padding-bottom: 10px;
   }
   
+  /* Movie display styles */
   div#movie-display {
     position: relative;
     left: 500px;
     top: -570px;
   }
   
+  /* Film list styles */
   ul#films li {
     list-style: none;
     font-size: 25px;
@@ -82,26 +96,31 @@
     line-height: 35px;
   }
   
+  /* Hover styles for film list items */
   ul#films li:hover {
     color: var(--colorThree);
   }
   
+  /* Movie title styles */
   h3#movie-title {
     font-size: 35px;
     margin-left: 0px;
   }
   
+  /* Movie tickets section styles */
   section#movie-tickets {
     position: relative;
     left: 700px;
     top: -710px;
   }
   
+  /* Bottom text styles */
   .bottom-text {
     line-height: 40px;
     font-size: 25px;
   }
   
+  /* Buy tickets button styles */
   button {
     font-size: 25px;
     height: 60px;
@@ -115,6 +134,7 @@
     left: -125px;
   }
   
+  /* Tickets remaining styles */
   div#tickets-remaining {
     position: relative;
     top: 20px;
@@ -123,6 +143,7 @@
     font-weight: bold;
   }
   
+  /* Ticket counter styles */
   div#ticket-counter {
     position: relative;
     top: 25px;
@@ -135,4 +156,5 @@
     color: white;
     border-radius: 50%;
   }
+  
   
