@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/theater.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kdam+Thmor+Pro&family=Kenia&family=Lobster&family=Nerko+One&family=Oswald&family=Roboto+Slab:wght@300;400&family=Rubik+80s+Fade&family=Rubik+Distressed&family=Rubik+Gemstones&family=Rubik+Storm&family=Rubik+Vinyl&family=Zen+Dots&display=swap" rel="stylesheet">
+    <title>Flatdango Theater</title>
+</head>
+
+<body>
+    <div class="nav">
+       <img src="./img/theater.png" alt="">
+       <p id="header">Flatdango Movie Theater</p>
+       <img src="./img/discount.png" alt="">
+    </div>
+
+    <main>
+        <div class="movies">
+            <h2>Upcoming Movies</h2>
+            <ul id="films"></ul>
+        </div>
+
+        <div class="details">
+            <h2>Movie Details</h2>
+            <div class="movie-poster">
+                <img src="" alt="Movie Poster" id="poster">
+            </div>
+            <div class="movie-info">
+                <h3>Title:</h3>
+                <p id="name">Movie Name</p>
+
+                <h3>Description:</h3>
+                <p id="description">Movie Description</p>
+
+                <h3>Runtime:</h3>
+                <p id="runtime">Duration</p>
+
+                <h3>Showtime:</h3>
+                <p id="showtime">Time</p>
+
+                <h3>Capacity:</h3>
+                <p id="capacity">Capacity</p>
+
+                <h3>Tickets Sold:</h3>
+                <p id="sold">Sold</p>
+
+                <h3>Tickets Available:</h3>
+                <p id="available"></p>
+
+                <div class="tickets">
+                    <button id="btn"><img src="./img/buy.png" alt=""> Buy Ticket</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="koz">
+        <img src="./img/success.png" alt="" id="habib">
+        <p id="tick">You have successfully purchased a Ticket</p>
+        <p id="fat"></p>
+        <p class="common">Ticket No. 20</p>
+        <p id="ticket" class="common"></p>
+        <p id="show" class="common"></p>
+        <p id="run" class="common"></p>
+        <div class="hamza">
+            <img src="./img/exclamation.png" alt="" id="mom">
+            <p>Once tickets are purchased they are not refundable</p>
+            <p>Please note that outside food is not allowed</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
