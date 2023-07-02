@@ -1,34 +1,46 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flatdango</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flatdango</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
     <h1>Flatdango</h1>
+  </header>
+
+  <div class="container">
     <section id="hero-section">
-      <div id="movie-menu">
-        <ul id="films">
-          <li class="filmItem">PlaceHolder li</li>
-          <h2>Movies</h2>
+      <div class="movie-details">
+        <h2 class="movie-title">Movie Title</h2>
+        <div class="movie-poster-container">
+          <img class="movie-poster" src="" alt="Movie Poster" />
+        </div>
+        <div class="movie-info">
+          <p class="info-label">Showtime:</p>
+          <p class="showtime">showtime</p>
+          <p class="info-label">Runtime:</p>
+          <p class="runtime">runtime</p>
+        </div>
+      </div>
+      <div class="movie-menu">
+        <h2>Movies</h2>
+        <ul class="films">
+          <li class="film-item">PlaceHolder li</li>
         </ul>
       </div>
-      <div id="movie-display">
-        <h3 id="movie-title" class="movieTitle">Movie Title</h3>
-        <img id="movie-poster" src="" alt="Movie Poster" />
-        <p class="bottom-text" id="showtime-text">Showtime:</p>
-        <div id="showtime" class="bottom-text">showtime</div>
-        <p class="bottom-text" id="runtime-text">Runtime:</p>
-        <div id="runtime" class="bottom-text">runtime</div>
-      </div>
     </section>
+
     <section id="movie-tickets">
-      <div id="ticket-counter" class="bottom-text"></div>
-      <div class="bottom-text" id="tickets-remaining">TICKETS REMAINING</div>
-      <button id="buy-ticket">Buy Tickets</button>
+      <div class="ticket-counter"></div>
+      <div class="tickets-remaining">TICKETS REMAINING</div>
+      <button class="buy-ticket">Buy Tickets</button>
     </section>
-    <script type="text/javascript" src="./index.js"></script>
-  </body>
+  </div>
+
+  <script type="text/javascript" src="./index.js"></script>
+</body>
 </html>
