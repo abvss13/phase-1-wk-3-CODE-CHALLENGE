@@ -4,3 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((data) => {
         movieList(data.films);
       });
+
+      function movieList(data) {
+        const moviesList = document.getElementById("moviesList");
+        
