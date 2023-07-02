@@ -9,3 +9,24 @@
   - Telephone: +254798491946
   - Email: abdulabass1738@gmail.com
   - Social Media: [Instagram](https://www.instagram.com/__.abvss_.1300/?igshid=NTc4MTIwNjQ2YQ%3D%3D)
+
+# Flatdango Movie Ticket Booking App
+
+Flatdango is a simple movie ticket booking app that allows users to browse and book movie tickets. This README.md file provides an overview of the project and instructions for running the app.
+
+## Getting Started
+
+To get started with the Flatdango app, follow the steps below:
+
+### Prerequisites
+
+Make sure you have the following software installed on your machine:
+
+- Node.js: Download and Install Node.js
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
