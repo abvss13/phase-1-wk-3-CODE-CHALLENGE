@@ -43,3 +43,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     displayTicketPurchaseInfo(availableTickets);
   }
+
+  function displayTicketPurchaseInfo(availableTickets) {
+    const alwy = document.getElementById("ticket");
+    const show = document.getElementById("show");
+    const run = document.getElementById("run");
+    const fat = document.getElementById("fat");
+    const remaining = availableTickets - 1;
+
+    alwy.textContent = "Movie: " + movie.title;
+    show.textContent = "Showtime: " + movie.showtime;
+    run.textContent = "Runtime: " + movie.runtime + "min";
+    fat.textContent = remaining + " more tickets available. You can purchase them on the homepage.";
+  }
