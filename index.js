@@ -56,3 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
     run.textContent = "Runtime: " + movie.runtime + "min";
     fat.textContent = remaining + " more tickets available. You can purchase them on the homepage.";
   }
+
+  $(document).ready(function () {
+    $("#btn").click(function () {
+      $(".details").hide();
+      $(".koz").show();
+    });
+  });
+});
