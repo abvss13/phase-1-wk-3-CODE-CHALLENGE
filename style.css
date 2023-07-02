@@ -1,167 +1,138 @@
-* {
-    padding: 0;
-    margin: 0;
+:root {
+    --colorOne: #161925;
+    --colorTwo: #23395b;
+    --colorThree: #c42021;
+    --colorFour: #8ea8c3;
+    --colorFive: #f5efed;
+    --colorSix: #0a369d;
+  }
+  
+  * {
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
+    color: var(--colorTwo);
+    font-family: Arial, Helvetica, sans-serif;
   }
   
-  body {
-    width: 100%;
-    background-color: rgb(15, 8, 17);
+  p#showtime-text {
     position: relative;
+    color: var(--colorSix);
   }
   
-  .nav {
-    height: 10vh;
-    width: 100%;
-    background-color: black;
-    border: 3px solid;
-    border-image: linear-gradient(45deg, rgb(89, 4, 117), yellow, red, rgb(171, 89, 199)) 1;
+  div#showtime {
     position: relative;
-    display: flex;
+    top: -40px;
+    left: 120px;
+    color: #c42021;
   }
   
-  .nav img {
-    height: 99%;
+  div#runtime {
+    position: relative;
+    top: -123px;
+    left: 340px;
+    color: #c42021;
   }
   
-  .nav #header {
-    color: white;
-    font-size: 50px;
-    font-family: 'Rubik Distressed', cursive;
+  p#runtime-text {
+    position: relative;
+    top: -83px;
+    left: 240px;
+    color: var(--colorSix);
+  }
+  
+  section#hero-section {
+    background-color: var(--colorFive);
+  }
+  
+  img {
+    width: 500px;
+    height: 500px;
+    border: 3px solid black;
+    border-radius: 10px;
+  }
+  
+  h1 {
     text-align: center;
-    padding-top: 1%;
-    margin-left: 3%;
-  }
-  
-  .movies h2 {
-    color: yellowgreen;
-    font-size: 30px;
-    font-family: 'Rubik Distressed', cursive;
-    position: relative;
-    z-index: 10;
-  }
-  
-  .movies .movie {
+    font-size: 50px;
+    background-color: var(--colorOne);
     color: white;
-    width: 100%;
-    height: 42px;
-    font-size: 25px;
-    font-family: 'Rubik Gemstones', cursive;
-    padding: 7px;
-    list-style: none;
-    margin-top: 7px;
-    cursor: pointer;
-    position: relative;
-    z-index: 10;
-  }
-  
-  .movies .movie::after {
-    content: '';
-    position: absolute;
-    background-color: yellowgreen;
-    width: 0;
-    height: 4px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: width 0.3s;
-  }
-  
-  .movies .movie:hover::after {
+    display: inline-block;
     width: 100%;
   }
   
-  .details {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 40px;
-  }
-  
-  .details h2 {
-    color: white;
+  h2 {
+    margin-left: 100px;
     font-size: 35px;
-    font-family: 'Anton', sans-serif;
-    margin-bottom: 20px;
+    text-decoration: underline;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   
-  .details img {
-    width: 300px;
-    height: 400px;
-    margin-bottom: 20px;
+  div#movie-display {
+    position: relative;
+    left: 500px;
+    top: -570px;
   }
   
-  .details p {
-    color: white;
-    font-size: 20px;
-    font-family: 'Rubik', sans-serif;
-    margin-bottom: 10px;
-  }
-  
-  .tickets {
-    margin-top: 30px;
-  }
-  
-  .tickets button {
-    background-color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px 30px;
-    border-radius: 5px;
-    font-size: 20px;
-    transition: transform 0.3s;
-  }
-  
-  .tickets button:hover {
-    transform: scale(1.1);
-  }
-  
-  .koz {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 40px;
-  }
-  
-  .koz img {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-  }
-  
-  .koz p {
-    color: white;
+  ul#films li {
+    list-style: none;
     font-size: 25px;
-    font-family: 'Anton', sans-serif;
-    margin-bottom: 10px;
+    margin-left: 20px;
+    line-height: 35px;
   }
   
-  .koz .common {
+  ul#films li:hover {
+    color: var(--colorThree);
+  }
+  
+  h3#movie-title {
+    font-size: 35px;
+    margin-left: 0px;
+  }
+  
+  section#movie-tickets {
+    position: relative;
+    left: 700px;
+    top: -710px;
+  }
+  
+  .bottom-text {
+    line-height: 40px;
+    font-size: 25px;
+  }
+  
+  button {
+    font-size: 25px;
+    height: 60px;
+    width: 300px;
+    border: 0px;
+    background-color: var(--colorSix);
     color: white;
-    font-size: 20px;
-    font-family: 'Rubik', sans-serif;
-    margin-bottom: 10px;
+    border-radius: 10px;
+    position: relative;
+    top: 20px;
+    left: -125px;
   }
   
-  .koz .hamza {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  div#tickets-remaining {
+    position: relative;
+    top: 20px;
+    left: -100px;
+    color: var(--colorOne);
+    font-weight: bold;
   }
   
-  .koz .hamza p {
+  div#ticket-counter {
+    position: relative;
+    top: 25px;
+    font-size: 40px;
+    background-color: var(--colorSix);
+    width: 70px;
+    height: 70px;
+    padding-top: 15px;
+    padding-left: 10px;
     color: white;
-    font-size: 15px;
-    font-family: 'Rubik', sans-serif;
-    margin-bottom: 5px;
-  }
-  
-  .koz .hamza img {
-    width: 40px;
-    height: 40px;
+    border-radius: 50%;
   }
   
