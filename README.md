@@ -30,3 +30,42 @@ Clone the repository:
 
 ```bash
 git clone <repository-url>
+
+markdown
+Copy code
+Navigate to the project directory:
+
+```bash
+cd flatdango
+Install the dependencies:
+
+bash
+Copy code
+npm install
+Usage
+Start the local development server:
+
+bash
+Copy code
+npm start
+Open your web browser and visit http://localhost:3000 to access the Flatdango app.
+
+File Structure
+The project has the following file structure:
+
+bash
+Copy code
+├── index.js             # Entry point of the application
+├── package.json         # Project dependencies and scripts
+├── README.md            # Project documentation
+├── style.css            # CSS file for styling the app
+├── index.html           # HTML file for the main app layout
+└── films.json           # JSON file containing movie data
+Technologies Used
+The Flatdango app uses the following technologies:
+
+HTML: Markup language for creating the app's structure
+CSS: Styling language for designing the app's user interface
+JavaScript: Programming language for adding interactivity to the app
+Node.js: JavaScript runtime for executing server-side code
+
