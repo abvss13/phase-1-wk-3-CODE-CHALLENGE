@@ -1,5 +1,9 @@
+/* JavaScript */
+
+// Base URL for fetching movie data
 const baseUrl = "http://localhost:3000/films";
 
+// Fetch movies and populate the film list
 function fetchMovies() {
   fetch(baseUrl)
     .then((response) => response.json())
@@ -26,8 +30,10 @@ function fetchMovies() {
     });
 }
 
+// Fetch movies on page load
 fetchMovies();
 
+// Set the initial movie as the base movie
 function baseMovie() {
   fetch(baseUrl)
     .then((response) => response.json())
@@ -44,8 +50,10 @@ function baseMovie() {
     });
 }
 
+// Set the base movie on page load
 baseMovie();
 
+// Function to handle ticket purchase
 function buyTicket() {
   let button = document.querySelector("button#buy-ticket");
   button.addEventListener("click", function () {
@@ -61,4 +69,5 @@ function buyTicket() {
   });
 }
 
+// Call the buyTicket function
 buyTicket();
