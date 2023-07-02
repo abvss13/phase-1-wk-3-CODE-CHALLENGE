@@ -7,4 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       function movieList(data) {
         const moviesList = document.getElementById("moviesList");
-        
+
+        data.forEach((movie) => {
+            const listItem = document.createElement("li");
+            listItem.classList.add("movie");
+            listItem.innerText = movie.title;
+            moviesList.appendChild(listItem);
