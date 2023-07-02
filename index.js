@@ -29,4 +29,17 @@ document.addEventListener("DOMContentLoaded", () => {
             const capacity = document.getElementById("capacity");
             const sold = document.getElementById("sold");
             const available = document.getElementById("available");
-            
+
+            const availableTickets = movie.capacity - movie.tickets_sold;
+
+    movieName.textContent = movie.title;
+    movieImage.src = movie.poster;
+    description.textContent = movie.description;
+    runTime.textContent = movie.runtime + " min";
+    showTime.textContent = movie.showtime;
+    capacity.textContent = movie.capacity + " seats";
+    sold.textContent = movie.tickets_sold + " tickets";
+    available.textContent = availableTickets + " tickets";
+
+    displayTicketPurchaseInfo(availableTickets);
+  }
