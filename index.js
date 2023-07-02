@@ -1,66 +1,64 @@
-document.addEventListener("DOMContentLoaded", () => {
-    fetch("https://al-hajjar.github.io/flatdangocodechallenge/db.json")
-      .then((res) => res.json())
-      .then((data) => {
-        movieList(data.films);
+const baseUrl = "http://localhost:3000/films";
+
+function fetchMovies() {
+  fetch(baseUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((films) => {
+        let li = document.createElement("li");
+        li.textContent = films.title;
+        li.addEventListener("click", (e) => {
+          let buttonContent = document.querySelector("button#buy-ticket");
+          buttonContent.textContent = "Buy Tickets";
+          let title = document.getElementById("movie-title");
+          title.textContent = films.title;
+          let img = document.getElementById("movie-poster");
+          img.src = films.poster;
+          let showTime = document.getElementById("showtime");
+          showTime.textContent = films.showtime;
+          let runTime = document.getElementById("runtime");
+          runTime.textContent = `${films.runtime} Minutes`;
+          let tickets = document.querySelector("div#ticket-counter");
+          tickets.textContent = films.capacity - films.tickets_sold;
+        });
+        document.querySelector("ul#films").appendChild(li);
       });
-
-      function movieList(data) {
-        const moviesList = document.getElementById("moviesList");
-
-        data.forEach((movie) => {
-            const listItem = document.createElement("li");
-            listItem.classList.add("movie");
-            listItem.innerText = movie.title;
-            moviesList.appendChild(listItem);
-
-            listItem.addEventListener("click", () => {
-                displayMovie(movie);
-              });
-            });
-          }     
-
-          function displayMovie(movie) {
-            const movieName = document.getElementById("name");
-            const movieImage = document.getElementById("poster");
-            const description = document.getElementById("description");
-            const runTime = document.getElementById("runtime");
-            const showTime = document.getElementById("showtime");
-            const capacity = document.getElementById("capacity");
-            const sold = document.getElementById("sold");
-            const available = document.getElementById("available");
-
-            const availableTickets = movie.capacity - movie.tickets_sold;
-
-    movieName.textContent = movie.title;
-    movieImage.src = movie.poster;
-    description.textContent = movie.description;
-    runTime.textContent = movie.runtime + " min";
-    showTime.textContent = movie.showtime;
-    capacity.textContent = movie.capacity + " seats";
-    sold.textContent = movie.tickets_sold + " tickets";
-    available.textContent = availableTickets + " tickets";
-
-    displayTicketPurchaseInfo(availableTickets);
-  }
-
-  function displayTicketPurchaseInfo(availableTickets) {
-    const alwy = document.getElementById("ticket");
-    const show = document.getElementById("show");
-    const run = document.getElementById("run");
-    const fat = document.getElementById("fat");
-    const remaining = availableTickets - 1;
-
-    alwy.textContent = "Movie: " + movie.title;
-    show.textContent = "Showtime: " + movie.showtime;
-    run.textContent = "Runtime: " + movie.runtime + "min";
-    fat.textContent = remaining + " more tickets available. You can purchase them on the homepage.";
-  }
-
-  $(document).ready(function () {
-    $("#btn").click(function () {
-      $(".details").hide();
-      $(".koz").show();
     });
+}
+
+fetchMovies();
+
+function baseMovie() {
+  fetch(baseUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      document.querySelector("h3#movie-title").textContent = data[0].title;
+      document
+        .querySelector("img#movie-poster")
+        .setAttribute("src", `${data[0].poster}`);
+      document.querySelector("div#showtime").textContent = data[0].showtime;
+      document.querySelector("div#runtime").textContent = `${data[0].runtime} Minutes`;
+      document.querySelector("ul#films").firstElementChild.remove();
+      document.querySelector("div#ticket-counter").textContent =
+        data[0].capacity - data[0].tickets_sold;
+    });
+}
+
+baseMovie();
+
+function buyTicket() {
+  let button = document.querySelector("button#buy-ticket");
+  button.addEventListener("click", function () {
+    let currentLi = document.querySelector("div#ticket-counter");
+    let number = parseInt(currentLi.textContent);
+    if (number > 0) {
+      currentLi.textContent = currentLi.textContent - 1;
+    } else {
+      button.textContent = "Sold Out";
+      button.style.backgroundColor = "gray";
+      button.style.cursor = "not-allowed";
+    }
   });
-});
+}
+
+buyTicket();
