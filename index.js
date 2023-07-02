@@ -13,3 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
             listItem.classList.add("movie");
             listItem.innerText = movie.title;
             moviesList.appendChild(listItem);
+
+            listItem.addEventListener("click", () => {
+                displayMovie(movie);
+              });
+            });
+          }     
