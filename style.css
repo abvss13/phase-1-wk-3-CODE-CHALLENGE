@@ -1,44 +1,56 @@
 body {
-  background-color: darkslategrey;
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+header {
+  background-color: #008b8b;
+  text-align: center;
+  font-size: xx-large;
+  font-style: initial;
+  font-style: oblique;
+  font-stretch: extra-expanded;
+  box-shadow: #ffffff;
+  color: rgb(120, 120, 126);
+}
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+ background-color: aqua;
+  justify-items: center;
 }
 
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  background-color: rgb(72, 83, 61);
+  color: rgb(99, 99, 126);
 }
 
 li {
-  cursor: pointer;
-  background-color: #1a1a1b;
-  color: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
+  background-color: #1f1f1f;
+  padding: 20px;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
 }
 
 li:hover {
-  background-color: #5f7499;
+  background-color: #404040;
 }
 
 .film-card {
   display: none;
-  background-color: #a85751;
-  padding: 10px;
+  background-color: #2d2d2d;
+  padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px #7d2e68;
-  height: 600px;
-  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .film-card.active {
@@ -46,20 +58,14 @@ li:hover {
 }
 
 .film-card-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
   margin-bottom: 10px;
   object-fit: cover;
 }
 
 .film-card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 20px;
   text-align: center;
 }
 
@@ -70,31 +76,35 @@ li:hover {
 }
 
 .film-description {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 20px;
 }
 
 .film-byline {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 10px;
 }
 
 .film-btn {
-  background-color: #011638;
-  color: #fff;
+  background-color: #008b8b;
+  color: #ffffff;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .film-btn:hover {
-  background-color: #008b8b;
+  background-color: #005757;
 }
 
-.highlight {
-  background-color: #011638;
-  color: #dff8eb;
+footer {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
 }
 
 .bold-text {
