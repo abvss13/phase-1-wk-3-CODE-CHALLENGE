@@ -1,166 +1,107 @@
-:root {
-    --color-primary: #23395b;
-    --color-secondary: #c42021;
-    --color-background: #f5efed;
-    --color-text: #161925;
-  }
-  
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  body {
-    background-color: var(--color-background);
-  }
-  
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 40px;
-  }
-  
-  header {
-    background-color: var(--color-primary);
-    padding: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 40px;
-    color: white;
-  }
-  
-  .movie-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 40px;
-  }
-  
-  .movie-details {
-    flex: 0 0 60%;
-    padding-right: 40px;
-  }
-  
-  .movie-title {
-    font-size: 30px;
-    margin-bottom: 10px;
-    text-decoration: underline;
-  }
-  
-  .movie-poster-container {
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 10px;
-  }
-  
-  .movie-poster {
-    width: 100%;
-    height: auto;
-    border: 3px solid black;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .movie-info {
-    margin-top: 20px;
-  }
-  
-  .movie-info p {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: var(--color-text);
-  }
-  
-  .info-label {
-    font-weight: bold;
-  }
-  
-  .movie-menu {
-    flex: 0 0 40%;
-    margin-top: 20px;
-  }
-  
-  .movie-menu h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-    text-decoration: underline;
-  }
-  
-  .movie-menu ul {
-    list-style: none;
-  }
-  
-  .movie-menu li {
-    font-size: 20px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .movie-menu li:hover {
-    background-color: var(--color-primary);
-    color: white;
-  }
-  
-  .ticket-counter {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 10px;
-    color: var(--color-text);
-  }
-  
-  .tickets-remaining {
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: var(--color-text);
-  }
-  
-  .buy-ticket {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 5px;
-    background-color: var(--color-secondary);
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .buy-ticket:hover {
-    background-color: #8e1f20;
-  }
-  
-  /* Responsive styles */
-  @media screen and (max-width: 768px) {
-    .container {
-      padding: 20px;
-    }
-  
-    .movie-section {
-      flex-direction: column;
-    }
-  
-    .movie-details {
-      padding-right: 0;
-      margin-bottom: 40px;
-    }
-  
-    .movie-menu {
-      margin-top: 0;
-    }
-  
-    .movie-poster-container {
-      max-width: 100%;
-    }
-  }
-  
+body {
+  background-color: darkslategrey;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  cursor: pointer;
+  background-color: #1a1a1b;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+li:hover {
+  background-color: #5f7499;
+}
+
+.film-card {
+  display: none;
+  background-color: #a85751;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #7d2e68;
+  height: 600px;
+  position: relative;
+}
+
+.film-card.active {
+  display: block;
+}
+
+.film-card-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.film-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.film-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.film-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.film-byline {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.film-btn {
+  background-color: #011638;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.film-btn:hover {
+  background-color: #008b8b;
+}
+
+.highlight {
+  background-color: #011638;
+  color: #dff8eb;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.bold-italic-text {
+  font-weight: bold;
+  font-style: italic;
+}
